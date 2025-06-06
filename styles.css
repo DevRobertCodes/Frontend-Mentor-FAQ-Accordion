@@ -1,0 +1,129 @@
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: hsl(275, 100%, 97%);
+  background-image: url('background-pattern-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.Wrapper {
+  width: 100%;
+  max-width: 500px;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.faq-header img.icon-star {
+  width: 24px;
+  height: 24px;
+}
+
+.faq-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(292, 42%, 14%);
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.active{
+  color: hsl(292, 16%, 49%);
+}
+
+.accordion-item {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+  line-height: 1.5;
+}
+
+.accordion-header {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(292, 42%, 14%);
+  width: 100%;
+  text-align: left;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion img{
+  cursor: pointer;
+}
+
+.accordion-header img {
+  width: 24px;
+  height: 24px;
+}
+
+.accordion-body {
+  display: none;
+  padding-bottom: 1rem;
+}
+
+.accordion-item.active .accordion-body {
+  display: block;
+}
+
+.accordion-body p {
+  font-size: 0.99rem;
+  color: hsl(292, 16%, 49%);
+  line-height: 1.5;
+}
+
+/*@media (max-width: 600px) {
+  body {
+    background-image: url('background-pattern-mobile.svg');
+    background-size: cover;
+  }
+  .container {
+    padding: 1.5rem;
+  }
+  .faq-header h1 {
+    font-size: 1.5rem;
+  }
+  .accordion-header {
+    font-size: 0.95rem;
+  }
+  .accordion-body p {
+    font-size: 0.9rem;
+  }
+}
